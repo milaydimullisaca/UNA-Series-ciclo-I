@@ -3,13 +3,25 @@ using namespace std;
 
 int main() {
     int n;
-    cout << "Ingrese n: ";
+    cout << "Ingrese el número de términos (n): ";
     cin >> n;
-x=1;
- for (int i = 1; i <=n;i++) {
-        
-     cout <<(i+(i / 2) +1) << x <<",";
 
+    int secuencia[n];
+    int impar = 1;
+    int par = 2;
+
+    for(int i = 0; i < n; i++) {
+        if(i % 2 == 0) {
+            secuencia[i] = impar;
+            impar += 2;
+        } else {
+            secuencia[i] = par;
+            par += 2;
+        }
+    }
+
+    for(int i = 0; i < N; i++) {
+        cout << secuencia[i] << " ";
     }
 
     return 0;
